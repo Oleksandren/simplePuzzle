@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="M3e-lx-LHD">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Image List-->
+        <scene sceneID="718-Oi-ufV">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="1di-aq-WaK" customClass="ImageList" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="uxh-aZ-oFi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="2eW-uG-Jsz">
+                            <size key="itemSize" width="160" height="155"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageListCell" id="jde-dW-r3R" customClass="ImageListCell">
+                                <rect key="frame" x="0.0" y="64" width="160" height="155"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="160" height="155"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4D5-Em-gWt">
+                                            <rect key="frame" x="5" y="5" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="imageView" destination="4D5-Em-gWt" id="4ct-xs-Kk0"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="1di-aq-WaK" id="I7i-1d-u6Z"/>
+                            <outlet property="delegate" destination="1di-aq-WaK" id="bzC-mo-DGt"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="u4K-cE-G5D">
+                        <barButtonItem key="rightBarButtonItem" title="Photo Gallery" id="uAy-IG-11c">
+                            <connections>
+                                <action selector="takePhoto:" destination="1di-aq-WaK" id="593-qt-1ik"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="8Dc-Fv-Hap" kind="push" identifier="PlayGameSegue" id="vhB-OH-LRm"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kzt-Ee-T4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-551" y="-230"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IAd-Xn-Wca">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="M3e-lx-LHD" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="rBF-mQ-Z0i">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1di-aq-WaK" kind="relationship" relationship="rootViewController" id="Zob-BK-SxS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQH-Hr-kuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-991" y="-230"/>
+        </scene>
+        <!--Play Screen-->
+        <scene sceneID="6co-y7-yXt">
+            <objects>
+                <viewController id="8Dc-Fv-Hap" customClass="PlayScreen" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TeD-is-wgl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Hi0-D7-1gQ">
+                                <rect key="frame" x="0.0" y="64" width="150" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="0m5-mk-fSg">
+                                <rect key="frame" x="170" y="64" width="150" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ZVZ-LH-NEJ">
+                                <rect key="frame" x="0.0" y="165" width="150" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="P4q-f7-p0Q">
+                                <rect key="frame" x="170" y="165" width="150" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Y4k-8c-Upx">
+                                <rect key="frame" x="0.0" y="266" width="150" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="nhD-Cq-RHO">
+                                <rect key="frame" x="170" y="266" width="150" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="k36-JI-76e">
+                                <rect key="frame" x="0.0" y="367" width="150" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Htu-1z-WA8">
+                                <rect key="frame" x="170" y="367" width="150" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="w1j-bP-XPi">
+                                <rect key="frame" x="0.0" y="468" width="150" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="jvX-Dv-vqe">
+                                <rect key="frame" x="10" y="140" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83137254900000002" green="0.0039215686269999999" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H0p-37-tgR">
+                                <rect key="frame" x="75" y="449" width="171" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="8Dc-Fv-Hap" eventType="touchUpInside" id="cZ8-ir-5uo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Bq-m3-udL"/>
+                    <connections>
+                        <outlet property="mainImageView" destination="jvX-Dv-vqe" id="FkP-p5-Ye9"/>
+                        <outletCollection property="testingImageView" destination="Hi0-D7-1gQ" id="Lxf-0a-cBs"/>
+                        <outletCollection property="testingImageView" destination="0m5-mk-fSg" id="FqO-0q-Vsw"/>
+                        <outletCollection property="testingImageView" destination="ZVZ-LH-NEJ" id="6ga-3j-l3X"/>
+                        <outletCollection property="testingImageView" destination="P4q-f7-p0Q" id="B1t-Lc-jD7"/>
+                        <outletCollection property="testingImageView" destination="Y4k-8c-Upx" id="DGH-Cv-iQn"/>
+                        <outletCollection property="testingImageView" destination="nhD-Cq-RHO" id="uVb-Fk-NQJ"/>
+                        <outletCollection property="testingImageView" destination="k36-JI-76e" id="Z1P-b2-PRS"/>
+                        <outletCollection property="testingImageView" destination="Htu-1z-WA8" id="5fY-S8-Oe8"/>
+                        <outletCollection property="testingImageView" destination="w1j-bP-XPi" id="fGJ-aX-Ok1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pq2-eR-YiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-151" y="-230"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
