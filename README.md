@@ -3,6 +3,9 @@ simple-puzzle
 
 Simple puzzle game.
 
+It's a simple project, which can be used as a sample of my code.
+This project was developed as a test task at any one company.
+
 User can choose image from Gallery or default list images.
 When user tapped picture there is a transition to a game screen.
 Application only supports images with 600 x 600 pixels. The size of the playing field
