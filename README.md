@@ -8,11 +8,11 @@ This project was developed as a test task at any one company.
 
 User can choose image from Gallery or default list images.
 When user tapped picture there is a transition to a game screen.
-Application only supports images with 600 x 600 pixels. The size of the playing field
+Application only supports images with size 600 x 600 pixels. The size of the playing area
 3 x 3 cell.
 If a picture is chosen by the user more than
 600 by 600 pixels, it is cut to the desired size.
-If a picture is smaller than 600x600 will be shown an alert: "Selected picture the small" and the transition to previous screen.
+If a picture is smaller than 600x600 pixels, will be shown an alert: "Selected picture the small. Please select a another picture" and the transition to previous screen.
 
 
 
